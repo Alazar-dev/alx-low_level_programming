@@ -1,36 +1,31 @@
-
-  
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
 
 /**
- * main - Entry point
- * main: last_digit finder
- * Return: 0
+ * main - print combination of two two-digit numbers
+ * Return: 0.
  */
 
 int main(void)
 {
-	int n;
-	int ld;
-	char ls[] = "Last digit of";
+	int i, j;
 
-	srand(time(0));
-	n = rand() - RAND_MAX / 2;
-	ld = n % 10;
+	for (i = 0; i <= 98; i++)
+	{
+		for (j = i + 1; j <= 99; j++)
+		{
+			putchar(i / 10 + '0');
+			putchar(i % 10 + '0');
+			putchar(' ');
+			putchar(j / 10 + '0');
+			putchar(j % 10 + '0');
 
-	if (ld > 5)
-	{
-		printf("Last digit of %d is %d and is greater than 5\n", n, ld);
+			if (i < 98 && j < 100)
+			{
+				putchar(',');
+				putchar(' ');
+			}
+		}
 	}
-	else if (ld < 6 && ld != 0)
-	{
-		printf("%s %d is %d and is less than 6 and not 0\n", ls, n, ld);
-	}
-	else
-	{
-		printf("Last digit of %d is %d and is 0\n", n, ld);
-	}
+	putchar('\n');
 	return (0);
 }
