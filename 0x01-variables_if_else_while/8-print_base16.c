@@ -21,5 +21,7 @@ for (letter = 'a'; letter < 'g'; letter++)
 putchar(letter);
 }
 putchar('\n');
+
+return (0);
 }
 
