@@ -1,34 +1,36 @@
+a
+  
+#include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include <stdio.h>
-/* more headers goes there */
 
 /**
  * main - Entry point
- *
- * Return: Returns 0 (success)
+ * main: last_digit finder
+ * Return: 0
  */
+
 int main(void)
 {
 	int n;
-	int last_digit = n % 10;
+	int ld;
+	char ls[] = "Last digit of";
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-	printf("Last digit of %d is %i ", n, last_digit);
-	if (n > 5)
-	{
-	printf("and is greater than 5 \n");
-	}
-	else if (n == 0)
-	{
-	printf("and is 0 \n");
-	}
-	else if (n < 6 != 0)
-	{
-	printf("and is less than 6 and not 0 \n");
-	}
+	ld = n % 10;
 
+	if (ld > 5)
+	{
+		printf("Last digit of %d is %d and is greater than 5\n", n, ld);
+	}
+	else if (ld < 6 && ld != 0)
+	{
+		printf("%s %d is %d and is less than 6 and not 0\n", ls, n, ld);
+	}
+	else
+	{
+		printf("Last digit of %d is %d and is 0\n", n, ld);
+	}
 	return (0);
 }
-
