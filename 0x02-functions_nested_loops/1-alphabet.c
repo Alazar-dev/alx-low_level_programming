@@ -13,5 +13,6 @@ void print_alphabet(void)
 		__putchar(i);
 	}
 	__putchar('\n');
+	return (0);
 }
 
